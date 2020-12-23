@@ -1,0 +1,2 @@
+-r common.txt
+pip-upgrade-outdated==1.5
