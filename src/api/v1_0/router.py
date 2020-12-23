@@ -9,12 +9,12 @@ from knox.views import (
 )
 
 from api.v1_0.views.authentication_views import (
-    # AccountAPIView,
+    AccountViewSet,
     LoginAPIView
 )
 
 router = DefaultRouter(trailing_slash=False)
-#router.register('authentication', AgentViewSet, basename='new-policy')
+router.register('authentication', AccountViewSet, basename='new-account')
 
 urlpatterns = [
     path('login', LoginAPIView.as_view()),
